@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bnty4452tl4gg"]
-
-[ext_resource type="PackedScene" uid="uid://drfca7eeulm38" path="res://Scene2ScaredNecromancer.tscn" id="1_tf5j6"]
-
-[node name="Basics" type="Node2D"]
-
-[node name="Node2D" parent="." instance=ExtResource("1_tf5j6")]
-position = Vector2(397, 242)
