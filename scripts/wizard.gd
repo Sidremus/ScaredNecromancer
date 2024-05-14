@@ -30,7 +30,7 @@ func shoot_fireball():
 	var fireball_instance:Fireball = (fireball_scene.instantiate() as Fireball)
 	fireball_instance.the_wizard_who_cast_me = self
 	fireball_instance.fireball_goal_position = get_global_mouse_position()
-	fireball_instance.position = Vector2(20,0) if !wizard_sprite.flip_h else Vector2(-20,0)
+	wizard_sprite.set_frame_progress(1.)
 	add_child(fireball_instance)
 
 func _input(event: InputEvent) -> void:

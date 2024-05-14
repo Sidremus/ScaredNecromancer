@@ -28,8 +28,9 @@ func _physics_process(_delta: float) -> void:
 func _process(_delta: float) -> void:
 	queue_redraw()
 	if fireball_sprite.animation == "Summon":
-		fireball_sprite.flip_h = the_wizard_who_cast_me.wizard_sprite.flip_h
-		position = Vector2(20,0) if !the_wizard_who_cast_me.wizard_sprite.flip_h else Vector2(-20,0)
+		var flip_side:bool = the_wizard_who_cast_me.global_position.x > fireball_goal_position.x
+		fireball_sprite.flip_h = flip_side
+		position = Vector2(20,0) if !flip_side else Vector2(-20,0)
 		var animation_progrss_lerp:float = (fireball_sprite.frame as float) / fireball_sprite.sprite_frames.get_frame_count("Summon")
 		modulate = Color.TOMATO.lerp(Color.WHITE, animation_progrss_lerp)
 	else:
@@ -37,13 +38,11 @@ func _process(_delta: float) -> void:
 
 func _ready() -> void:
 	name = "Fireball "+str(get_rid().get_id())
-	if the_wizard_who_cast_me.input_vec == Vector2.ZERO: the_wizard_who_cast_me.wizard_sprite.flip_h = get_global_mouse_position().x < global_position.x 
 	fireball_sprite.play("Summon")
 	await fireball_sprite.animation_finished
 	
-	if the_wizard_who_cast_me.input_vec == Vector2.ZERO: the_wizard_who_cast_me.wizard_sprite.flip_h = get_global_mouse_position().x < global_position.x 
 	fireball_sprite.play("Flight")
-	
+	if the_wizard_who_cast_me.wizard_sprite.animation == "idle": the_wizard_who_cast_me.wizard_sprite.flip_h = fireball_sprite.flip_h
 	fireball_starting_position = to_global(position)
 	top_level = true
 	global_position = fireball_starting_position
