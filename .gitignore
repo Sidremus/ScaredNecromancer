@@ -1,2 +1,5 @@
 # Godot 4+ specific ignores
 .godot/
+assets/wizard01.png.kra
+assets/wizard01.png~
+assets/wizard01.png~
