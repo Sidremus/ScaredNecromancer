@@ -1029,6 +1029,7 @@ script = ExtResource("1_t33eo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Environment"]
 z_index = -100
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-69, -36)
 sprite_frames = SubResource("SpriteFrames_knv73")
@@ -1049,6 +1050,7 @@ polygon = PackedVector2Array(224.667, -115.333, 250.667, -114.667, 374, 10, 252,
 
 [node name="Fence01" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-153.118, -144.862)
 texture = ExtResource("2_1v5lh")
@@ -1057,6 +1059,7 @@ region_rect = Rect2(0, 640, 192, 64)
 
 [node name="Fence07" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-317.118, -77.8617)
 rotation = -0.785397
@@ -1067,6 +1070,7 @@ region_rect = Rect2(0, 640, 192, 64)
 
 [node name="Fence08" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(317.882, 57.1382)
 rotation = -0.785397
@@ -1077,6 +1081,7 @@ region_rect = Rect2(0, 640, 192, 64)
 
 [node name="Fence02" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-156.118, 126.138)
 texture = ExtResource("2_1v5lh")
@@ -1085,6 +1090,7 @@ region_rect = Rect2(192, 640, 192, 64)
 
 [node name="Fence05" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(-317.118, 55.1382)
 rotation = 0.785398
@@ -1096,6 +1102,7 @@ region_rect = Rect2(192, 640, 192, 64)
 
 [node name="Fence06" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(316.882, -82.8617)
 rotation = 0.785398
@@ -1107,6 +1114,7 @@ region_rect = Rect2(192, 640, 192, 64)
 
 [node name="Fence03" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(156.882, 126.138)
 texture = ExtResource("2_1v5lh")
@@ -1115,6 +1123,7 @@ region_rect = Rect2(384, 640, 192, 64)
 
 [node name="Fence04" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(37.8823, -144.862)
 texture = ExtResource("2_1v5lh")
@@ -1123,6 +1132,7 @@ region_rect = Rect2(384, 640, 192, 64)
 
 [node name="FenceGap" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1.88232, 126.138)
 texture = ExtResource("2_1v5lh")
@@ -1131,6 +1141,7 @@ region_rect = Rect2(0, 704, 128, 64)
 
 [node name="FenceGap2" type="Sprite2D" parent="Graveyard"]
 self_modulate = Color(0.73181, 0.73181, 0.73181, 1)
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(193.882, -145.862)
 texture = ExtResource("2_1v5lh")
@@ -1146,6 +1157,8 @@ scale = Vector2(0.629, 0.313)
 shape = SubResource("CircleShape2D_nm2vo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Graveyard/Gate"]
+z_index = 25
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_bnjb5")
@@ -1168,6 +1181,8 @@ scale = Vector2(0.608, 0.303)
 shape = SubResource("CircleShape2D_nm2vo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Graveyard/Gate2"]
+z_index = 25
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(0, -30)
 sprite_frames = SubResource("SpriteFrames_bnjb5")
@@ -1180,136 +1195,6 @@ autoplay = "close"
 position = Vector2(-1.33333, -7.33333)
 scale = Vector2(1, 0.813333)
 shape = SubResource("RectangleShape2D_l76da")
-
-[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(225.083, 31.0827)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.466403
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(-14.9173, -22.2507)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D4" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(140.416, -62.9174)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D5" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(56.416, 49.7493)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D6" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(-174.251, -3.58402)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D7" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(-224.917, -92.9174)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D8" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(-257.584, 36.416)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D9" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(-107.584, -72.9174)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D10" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(235.749, -75.584)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
-
-[node name="AnimatedSprite2D11" type="AnimatedSprite2D" parent="Graveyard"]
-self_modulate = Color(0.86192, 1, 0.890071, 1)
-z_index = -100
-texture_filter = 1
-position = Vector2(17.0827, -96.9174)
-scale = Vector2(1.513, 1.513)
-sprite_frames = SubResource("SpriteFrames_knv73")
-animation = &"8"
-frame_progress = 0.768879
-script = ExtResource("3_05qgp")
-sprite_sheet_row_range = Vector2i(6, 8)
-randomize_position = false
 
 [node name="Wizard" parent="." instance=ExtResource("5_lk1t5")]
 position = Vector2(621, 210)

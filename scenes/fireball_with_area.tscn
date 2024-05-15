@@ -99,6 +99,8 @@ radius = 161.05
 script = ExtResource("1_uf8a5")
 
 [node name="FireballSprite" type="AnimatedSprite2D" parent="."]
+z_index = 75
+y_sort_enabled = true
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_mo8wd")
 animation = &"Flight"

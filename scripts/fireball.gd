@@ -1,6 +1,7 @@
 extends Area2D
 class_name Fireball
 
+@export var fireball_damage:float = 35.
 @export var fireball_speed:float = 810.
 @onready var fireball_sprite: AnimatedSprite2D = $FireballSprite
 
@@ -21,6 +22,9 @@ func _physics_process(_delta: float) -> void:
 					collision_debug_string += hit_bodies[i].name
 				else:
 					collision_debug_string += " | " + hit_bodies[i].name
+			for body in hit_bodies:
+				if body is NPC:
+					body.take_damage(fireball_damage * lerpf(.5,1.8, randfn(0.5,.2)))
 		else:
 			collision_debug_string = name + " hit nothing"
 		print_debug("\n" + collision_debug_string)
@@ -69,6 +73,6 @@ func _ready() -> void:
 func _draw() -> void:
 	if fireball_sprite.animation == "Summon":
 		var target_pos:Vector2 = to_local(fireball_goal_position)
-		draw_line(target_pos + Vector2.RIGHT * 35., target_pos - Vector2.RIGHT * 35., Color.FIREBRICK.lerp(Color.WHITE, absf(sin(Time.get_unix_time_from_system() * 12.))))
-		draw_line(target_pos + Vector2.UP * 35., target_pos - Vector2.UP * 35., Color.FIREBRICK.lerp(Color.WHITE, absf(sin(Time.get_unix_time_from_system() * 12.))))
+		draw_line(target_pos + Vector2.RIGHT * 35., target_pos - Vector2.RIGHT * 35., Color.FIREBRICK.lerp(Color.WHITE, absf(sin(Time.get_unix_time_from_system() * 12. + get_rid().get_id()))))
+		draw_line(target_pos + Vector2.UP * 35., target_pos - Vector2.UP * 35., Color.FIREBRICK.lerp(Color.WHITE, absf(sin(Time.get_unix_time_from_system() * 12. + get_rid().get_id()))))
 

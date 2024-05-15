@@ -262,16 +262,18 @@ editor_draw_limits = true
 editor_draw_drag_margin = true
 
 [node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
+z_index = 100
+y_sort_enabled = true
 texture_filter = 1
-position = Vector2(0, -21)
+position = Vector2(0, 23)
 scale = Vector2(1.7, 1.7)
 sprite_frames = SubResource("SpriteFrames_2ufxg")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.630952
+offset = Vector2(0, -28.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
 shape = SubResource("CapsuleShape2D_5ihcv")
 
 [connection signal="animation_looped" from="AnimatedSprite" to="." method="_on_animated_sprite_animation_looped"]

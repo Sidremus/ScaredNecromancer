@@ -8,6 +8,8 @@ class_name Wizard
 
 var fireball_scene:= preload("res://scenes/fireball_with_area.tscn")
 var input_vec:Vector2
+var active_summon_locations:Array[SummonLocation] = []
+
 func _physics_process(delta: float) -> void:
 	input_vec.x = Input.get_axis("left","right")
 	input_vec.y = Input.get_axis("up","down")
@@ -34,5 +36,8 @@ func shoot_fireball():
 	add_child(fireball_instance)
 
 func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("summon"):
+		if active_summon_locations.size() > 0:
+			active_summon_locations.pick_random().summon()
 	if event.is_action_pressed("fireball"):
 		shoot_fireball()

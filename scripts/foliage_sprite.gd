@@ -4,7 +4,7 @@ extends AnimatedSprite2D
 @export var randomize_position:= true
 
 func _ready() -> void:
-	var random_int:float = randi_range(sprite_sheet_row_range.x,sprite_sheet_row_range.y)
+	var random_int:int = randi_range(sprite_sheet_row_range.x,sprite_sheet_row_range.y)
 	var random_float:float = randfn(.5,.2)
 	play(str(random_int))
 	speed_scale = lerpf(.1,.45, random_float)
